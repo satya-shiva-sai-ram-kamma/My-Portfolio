@@ -123,6 +123,16 @@
 
         </ul>
 
+        <div class="separator"></div>
+
+        <div class="downloadcv">
+          
+        <button class="form-btn-cv" type="submit" onclick="downloadFile()">
+          <ion-icon name="download-outline"></ion-icon>
+          <span>View CV</span>
+        </button>
+        </div>
+
       </div>
 
     </aside>
@@ -975,6 +985,18 @@ Analysis and Visualization.
   <!--
     - ionicon link
   -->
+
+  <script>
+    function downloadFile() {
+        const link = document.createElement('a');
+        link.href = 'Satya Shiva Sai Ram Kamma- Resume.pdf'; // Replace with the path to your file
+        link.download = 'Satya Shiva Sai Ram Kamma- Resume.pdf'; // Replace with the desired file name
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    }
+</script>
+
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
